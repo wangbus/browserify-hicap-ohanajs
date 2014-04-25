@@ -1,0 +1,27 @@
+{
+  "name": "2",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "~3.44.2",
+    "ejs": "^1.0.0",
+    "express": "^4.1.0",
+    "nodemon": "~1.0.17",
+    "watchify": "~0.8.2",
+    "backbone": "^1.1.2",
+    "jquery": "^2.1.0"
+  },
+  "devDependencies": {
+    "watchify": "^0.8.2",
+    "nodemon": "^1.0.17",
+    "browserify": "^3.44.2"
+  },
+  "scripts": {
+    "watch": "watchify client/index.js -o public/app.js -v",
+    "build": "browserify client/index.js -o public/app.js",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
