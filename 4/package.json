@@ -1,0 +1,26 @@
+{
+  "name": "4",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "install": "napa",
+    "build": "browserify -t brfs client/index.js -o public/bundle.js",
+    "watch": "watchify -t brfs client/index.js -o public/bundle.js -v",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "napa": {
+    "angular": "angular/bower-angular",
+    "angular-route": "angular/bower-angular-route",
+    "angular-sanitize": "angular/bower-angular-sanitize"
+  },
+  "dependencies": {
+    "express": "^3.5.1",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "brfs": "^1.0.2"
+  }
+}
